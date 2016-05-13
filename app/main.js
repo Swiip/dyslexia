@@ -12,7 +12,7 @@
 	function transform(text) {
 		var words = text.split(' ');
 		for (var i = 0; i < words.length; i++) {
-			if (words[i].length > 3) {
+			if (words[i].length > 3 && Math.random() < 0.1) {
 				words[i] = shuffle(words[i]);
 			}
 		}
@@ -33,5 +33,5 @@
 
 	window.setInterval(function () {
 		traverse(document);
-	}, 500);
+	}, 50);
 })();
